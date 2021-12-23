@@ -22,4 +22,4 @@ deploy:
   local-dir: $HOME/Documents/mdbook # In case of custom book path: path/to/mybook/book
   keep-history: false
   on:
-    branch: main
+    branch: master
