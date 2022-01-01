@@ -16,7 +16,7 @@ fn foo() -> i32 {
 
 <span style="color:blue">some *blue* text</span>.
 
-<span style="background:blue">some *blue* text</span>.
+<span style="background:#6495ED">some *blue* text</span>.
 
 This is an example of a footnote[^note].
 
