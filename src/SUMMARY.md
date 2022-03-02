@@ -1,5 +1,7 @@
 # Summary
 
+- [*Introduction*](./intro.md)
+
 # 程式設計（programming design）
 
 - [Chapter 1 I/O](./programming-design/ch1.md)
