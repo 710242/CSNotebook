@@ -1,6 +1,6 @@
 # Summary
 
-- [*Introduction*](./intro.md)
+[Introduction](./intro.md)
 
 # 程式設計（programming design）
 
