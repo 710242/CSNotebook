@@ -12,7 +12,6 @@ int main(){
 ```
 
 ### 注意
-- 非char陣列之外的型態都要加上位置符
 - 若變數有很多個請用迴圈然後直輸入進陣列位置
 - 不要在"%d"後面加"\n"
 
@@ -51,4 +50,4 @@ int main(){
 
 ### 4.putchar
 
-不要用putchar
+--不要用putchar--putchar在之後的string章節詳談
