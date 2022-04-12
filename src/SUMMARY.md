@@ -48,7 +48,6 @@
   - [program and process](./system-programming/ch1_4.md)
   - [user identification](./system-programming/ch1_5.md)
   - [time value](./system-programming/ch1_6.md)
-  <!-- - [some commands](./system-programming/ch1_4.md) -->
 - [file i/o](./system-programming/ch3_0.md)
   - [file descriptors](./system-programming/ch3_1.md)
   - [open function](./system-programming/ch3_2.md)
@@ -63,7 +62,22 @@
   - [fcntl function](./system-programming/ch3_11.md)
   - [ioctl function](./system-programming/ch3_12.md)
 - [files and diectories](./system-programming/ch4_0.md)
-  - [stat]()
+  - [stat function](./system-programming/ch4_1.md)
+  - [file type](./system-programming/ch4_2.md)
+  - [set uid & set gid](./system-programming/ch4_3.md)
+  - [file access permision](./system-programming/ch4_4.md)
+  - [access and faccessat function](./system-programming/ch4_5.md)
+  - [umask function](./system-programming/ch4_6.md)
+  - [chmod, fchmod, and fchmodat function](./system-programming/ch4_7.md)
+  - [file truncation](./system-programming/ch4_8.md)
+  - [link, linkat, unlink, unlinkat, and remove function](./system-programming/ch4_9.md)
+  - [rename and renameat function](./system-programming/ch4_10.md)
+  - [sybolic links](./system-programming/ch4_11.md)
+  - [file time](./system-programming/ch4_12.md)
+  - [futimens, utimensat, and utimes function](./system-programming/ch4_13.md)
+  - [mkdir, mkdirat, and rmdir function](./system-programming/ch4_14.md)
+  - [reading diectories](./system-programming/ch4_15.md)
+  - [chdir, fchdir, and getcwd function](./system-programming/ch4_16.md)
 
 # 離散數學（discrete math） --testing
 

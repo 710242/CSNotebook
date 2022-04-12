@@ -8,10 +8,10 @@
 
 **[chapter 1]程式設計**
 
-language：c
+language：c<br />
 textbook: none
 
-- [ ] I/O
+- [ ] [I/O](./programming-design/ch1_0.md)
   - [ ] format
   - [ ] input
   - [ ] output
@@ -49,5 +49,5 @@ textbook: none
 
 **[chapter 2]系統程式**
 
-language：c
+language：c<br />
 textbook: advanced programming in UNIX environment
