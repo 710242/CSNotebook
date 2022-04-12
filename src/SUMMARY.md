@@ -1,6 +1,7 @@
 # Summary
 
 [Introduction](./intro.md)
+[TODO](./todo.md)
 
 # 程式設計（programming design）
 
@@ -10,11 +11,12 @@
   - [output](./programming-design/ch1_3.md)
 - [type](./programming-design/ch2_0.md)
   - [declare](./programming-design/ch2_1.md)
-  - [const val](./programming-design/ch2_2.md)
-  - [static val](./programming-design/ch2_3.md)
+  - [const](./programming-design/ch2_2.md)
+  - [static](./programming-design/ch2_3.md)
 - [flow](./programming-design/ch3_0.md)
   - [if else](./programming-design/ch3_1.md)
   - [switch](./programming-design/ch3_2.md)
+  - [ternary operator](./programming-design/ch3_3.md)
 - [loop](./programming-design/ch4_0.md)
   - [for](./programming-design/ch4_1.md)
   - [while](./programming-design/ch4_2.md)
@@ -22,20 +24,46 @@
 - [function](./programming-design/ch5_0.md)
   - [declare](./programming-design/ch5_1.md)
   - [recursive](./programming-design/ch5_2.md)
-- [pointer]()
-  - [declare]()
+- [pointer](./programming-design/ch6_0.md)
+  - [declare](./programming-design/ch6_1.md)
+  - [refrence & dereference](./programming-design/ch6_2.md)
 - [string]()
+  - [functions 1]()
+  - [functions 2]()
+- [memory]()
+  - [address]()
+  - [dispatch]()
+- [bitwise]()
+  - [operation]()
+  - [useful example]()
 - [advanced type]()
 - [advanced function]()
 
 # 系統程式（system programming）
 
 - [unix system overview](./system-programming/ch1_0.md)
-  - [1.1 shell](./system-programming/ch1_1.md)
-  - [1.2 file and path](./system-programming/ch1_2.md)
-  - [1.3 some commands](./system-programming/ch1_3.md)
+  - [shell](./system-programming/ch1_1.md)
+  - [file and directory](./system-programming/ch1_2.md)
+  - [input and output](./system-programming/ch1_3.md)
+  - [program and process](./system-programming/ch1_4.md)
+  - [user identification](./system-programming/ch1_5.md)
+  - [time value](./system-programming/ch1_6.md)
+  <!-- - [some commands](./system-programming/ch1_4.md) -->
 - [file i/o](./system-programming/ch3_0.md)
-- [files and diectories](./system-programming/ch3_0.md)
+  - [file descriptors](./system-programming/ch3_1.md)
+  - [open function](./system-programming/ch3_2.md)
+  - [creat function](./system-programming/ch3_3.md)
+  - [close function](./system-programming/ch3_4.md)
+  - [lseek function](./system-programming/ch3_5.md)
+  - [read function](./system-programming/ch3_6.md)
+  - [write function](./system-programming/ch3_7.md)
+  - [file sharing](./system-programming/ch3_8.md)
+  - [dup and dup2 function](./system-programming/ch3_9.md)
+  - [sync fsync and fdatasync function](./system-programming/ch3_10.md)
+  - [fcntl function](./system-programming/ch3_11.md)
+  - [ioctl function](./system-programming/ch3_12.md)
+- [files and diectories](./system-programming/ch4_0.md)
+  - [stat]()
 
 # 離散數學（discrete math） --testing
 

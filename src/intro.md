@@ -8,29 +8,40 @@
 
 **[chapter 1]程式設計**
 
-使用語言：c
+language：c
+textbook: none
 
-- [x] I/O
+- [ ] I/O
   - [ ] format
-  - [x] input
-  - [x] output
-- [x] type
-  - [x] declare
-  - [x] const
-  - [x] static
+  - [ ] input
+  - [ ] output
+- [ ] type
+  - [ ] declare
+  - [ ] const
+  - [ ] static
 - [ ] flow
   - [ ] if else
   - [ ] switch
-- [x] loop
-  - [x] for
-  - [x] while
+  - [ ] ternary operator
+- [ ] loop
+  - [ ] for
+  - [ ] while
   - [ ] do while
-- [x] function
-  - [x] declare
-  - [x] recursive
+- [ ] function
+  - [ ] declare
+  - [ ] recursive
 - [ ] pointer
   - [ ] declare
+  - [ ] refrence & dereference
 - [ ] string
+  - [ ] functions 1
+  - [ ] functions 2
+- [ ] memory
+  - [ ] address
+  - [ ] dispatch
+- [ ] bitwise
+  - [ ] operation
+  - [ ] useful example
 - [ ] advanced type
 - [ ] advanced function
 
@@ -38,4 +49,5 @@
 
 **[chapter 2]系統程式**
 
-使用語言：c
+language：c
+textbook: advanced programming in UNIX environment
