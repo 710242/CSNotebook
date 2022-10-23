@@ -1,0 +1,3 @@
+[submodule "DSAcourse"]
+	path = DSAcourse
+	url = https://github.com/710242/DSAcourse.git
