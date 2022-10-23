@@ -1,0 +1,977 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title></title>
+        <meta name="robots" content="noindex" />
+        <!-- Custom HTML head -->
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        <!-- MathJax -->
+        <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="intro.html">Introduction</a></li><li class="chapter-item expanded affix "><a href="todo.html">TODO</a></li><li class="chapter-item expanded affix "><li class="part-title">程式設計（programming design）</li><li class="chapter-item expanded "><a href="programming-design/ch1_0.html"><strong aria-hidden="true">1.</strong> I/O</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="programming-design/ch1_1.html"><strong aria-hidden="true">1.1.</strong> format</a></li><li class="chapter-item expanded "><a href="programming-design/ch1_2.html"><strong aria-hidden="true">1.2.</strong> input</a></li><li class="chapter-item expanded "><a href="programming-design/ch1_3.html"><strong aria-hidden="true">1.3.</strong> output</a></li></ol></li><li class="chapter-item expanded "><a href="programming-design/ch2_0.html"><strong aria-hidden="true">2.</strong> type</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="programming-design/ch2_1.html"><strong aria-hidden="true">2.1.</strong> declare</a></li><li class="chapter-item expanded "><a href="programming-design/ch2_2.html"><strong aria-hidden="true">2.2.</strong> const</a></li><li class="chapter-item expanded "><a href="programming-design/ch2_3.html"><strong aria-hidden="true">2.3.</strong> static</a></li></ol></li><li class="chapter-item expanded "><a href="programming-design/ch3_0.html"><strong aria-hidden="true">3.</strong> flow</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="programming-design/ch3_1.html"><strong aria-hidden="true">3.1.</strong> if else</a></li><li class="chapter-item expanded "><a href="programming-design/ch3_2.html"><strong aria-hidden="true">3.2.</strong> switch</a></li><li class="chapter-item expanded "><a href="programming-design/ch3_3.html"><strong aria-hidden="true">3.3.</strong> ternary operator</a></li></ol></li><li class="chapter-item expanded "><a href="programming-design/ch4_0.html"><strong aria-hidden="true">4.</strong> loop</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="programming-design/ch4_1.html"><strong aria-hidden="true">4.1.</strong> for</a></li><li class="chapter-item expanded "><a href="programming-design/ch4_2.html"><strong aria-hidden="true">4.2.</strong> while</a></li><li class="chapter-item expanded "><a href="programming-design/ch4_3.html"><strong aria-hidden="true">4.3.</strong> do while</a></li></ol></li><li class="chapter-item expanded "><a href="programming-design/ch5_0.html"><strong aria-hidden="true">5.</strong> function</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="programming-design/ch5_1.html"><strong aria-hidden="true">5.1.</strong> declare</a></li><li class="chapter-item expanded "><a href="programming-design/ch5_2.html"><strong aria-hidden="true">5.2.</strong> recursive</a></li></ol></li><li class="chapter-item expanded "><a href="programming-design/ch6_0.html"><strong aria-hidden="true">6.</strong> pointer</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="programming-design/ch6_1.html"><strong aria-hidden="true">6.1.</strong> declare</a></li><li class="chapter-item expanded "><a href="programming-design/ch6_2.html"><strong aria-hidden="true">6.2.</strong> refrence &amp; dereference</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">7.</strong> string</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">7.1.</strong> functions 1</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">7.2.</strong> functions 2</div></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">8.</strong> memory</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">8.1.</strong> address</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">8.2.</strong> dispatch</div></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">9.</strong> bitwise</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">9.1.</strong> operation</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">9.2.</strong> useful example</div></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">10.</strong> advanced type</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">11.</strong> advanced function</div></li><li class="chapter-item expanded affix "><li class="part-title">系統程式（system programming）</li><li class="chapter-item expanded "><a href="system-programming/ch1_0.html"><strong aria-hidden="true">12.</strong> unix system overview</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="system-programming/ch1_1.html"><strong aria-hidden="true">12.1.</strong> shell</a></li><li class="chapter-item expanded "><a href="system-programming/ch1_2.html"><strong aria-hidden="true">12.2.</strong> file and directory</a></li><li class="chapter-item expanded "><a href="system-programming/ch1_3.html"><strong aria-hidden="true">12.3.</strong> input and output</a></li><li class="chapter-item expanded "><a href="system-programming/ch1_4.html"><strong aria-hidden="true">12.4.</strong> program and process</a></li><li class="chapter-item expanded "><a href="system-programming/ch1_5.html"><strong aria-hidden="true">12.5.</strong> user identification</a></li><li class="chapter-item expanded "><a href="system-programming/ch1_6.html"><strong aria-hidden="true">12.6.</strong> time value</a></li></ol></li><li class="chapter-item expanded "><a href="system-programming/ch3_0.html"><strong aria-hidden="true">13.</strong> file i/o</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="system-programming/ch3_1.html"><strong aria-hidden="true">13.1.</strong> file descriptors</a></li><li class="chapter-item expanded "><a href="system-programming/ch3_2.html"><strong aria-hidden="true">13.2.</strong> open function</a></li><li class="chapter-item expanded "><a href="system-programming/ch3_3.html"><strong aria-hidden="true">13.3.</strong> creat function</a></li><li class="chapter-item expanded "><a href="system-programming/ch3_4.html"><strong aria-hidden="true">13.4.</strong> close function</a></li><li class="chapter-item expanded "><a href="system-programming/ch3_5.html"><strong aria-hidden="true">13.5.</strong> lseek function</a></li><li class="chapter-item expanded "><a href="system-programming/ch3_6.html"><strong aria-hidden="true">13.6.</strong> read function</a></li><li class="chapter-item expanded "><a href="system-programming/ch3_7.html"><strong aria-hidden="true">13.7.</strong> write function</a></li><li class="chapter-item expanded "><a href="system-programming/ch3_8.html"><strong aria-hidden="true">13.8.</strong> file sharing</a></li><li class="chapter-item expanded "><a href="system-programming/ch3_9.html"><strong aria-hidden="true">13.9.</strong> dup and dup2 function</a></li><li class="chapter-item expanded "><a href="system-programming/ch3_10.html"><strong aria-hidden="true">13.10.</strong> sync fsync and fdatasync function</a></li><li class="chapter-item expanded "><a href="system-programming/ch3_11.html"><strong aria-hidden="true">13.11.</strong> fcntl function</a></li><li class="chapter-item expanded "><a href="system-programming/ch3_12.html"><strong aria-hidden="true">13.12.</strong> ioctl function</a></li></ol></li><li class="chapter-item expanded "><a href="system-programming/ch4_0.html"><strong aria-hidden="true">14.</strong> files and diectories</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="system-programming/ch4_1.html"><strong aria-hidden="true">14.1.</strong> stat function</a></li><li class="chapter-item expanded "><a href="system-programming/ch4_2.html"><strong aria-hidden="true">14.2.</strong> file type</a></li><li class="chapter-item expanded "><a href="system-programming/ch4_3.html"><strong aria-hidden="true">14.3.</strong> set uid &amp; set gid</a></li><li class="chapter-item expanded "><a href="system-programming/ch4_4.html"><strong aria-hidden="true">14.4.</strong> file access permision</a></li><li class="chapter-item expanded "><a href="system-programming/ch4_5.html"><strong aria-hidden="true">14.5.</strong> access and faccessat function</a></li><li class="chapter-item expanded "><a href="system-programming/ch4_6.html"><strong aria-hidden="true">14.6.</strong> umask function</a></li><li class="chapter-item expanded "><a href="system-programming/ch4_7.html"><strong aria-hidden="true">14.7.</strong> chmod, fchmod, and fchmodat function</a></li><li class="chapter-item expanded "><a href="system-programming/ch4_8.html"><strong aria-hidden="true">14.8.</strong> file truncation</a></li><li class="chapter-item expanded "><a href="system-programming/ch4_9.html"><strong aria-hidden="true">14.9.</strong> link, linkat, unlink, unlinkat, and remove function</a></li><li class="chapter-item expanded "><a href="system-programming/ch4_10.html"><strong aria-hidden="true">14.10.</strong> rename and renameat function</a></li><li class="chapter-item expanded "><a href="system-programming/ch4_11.html"><strong aria-hidden="true">14.11.</strong> sybolic links</a></li><li class="chapter-item expanded "><a href="system-programming/ch4_12.html"><strong aria-hidden="true">14.12.</strong> file time</a></li><li class="chapter-item expanded "><a href="system-programming/ch4_13.html"><strong aria-hidden="true">14.13.</strong> futimens, utimensat, and utimes function</a></li><li class="chapter-item expanded "><a href="system-programming/ch4_14.html"><strong aria-hidden="true">14.14.</strong> mkdir, mkdirat, and rmdir function</a></li><li class="chapter-item expanded "><a href="system-programming/ch4_15.html"><strong aria-hidden="true">14.15.</strong> reading diectories</a></li><li class="chapter-item expanded "><a href="system-programming/ch4_16.html"><strong aria-hidden="true">14.16.</strong> chdir, fchdir, and getcwd function</a></li></ol></li><li class="chapter-item expanded "><li class="part-title">離散數學（discrete math） --testing</li><li class="chapter-item expanded "><a href="discrete_mathmatics/chapter_1.html"><strong aria-hidden="true">15.</strong> test</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title"></h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="introduction"><a class="header" href="#introduction">Introduction</a></h1>
+<blockquote>
+<p><strong>Note</strong> <br />
+這本書是整理cs的個人筆記，內容指包括一些小觀念及作法，<em>沒有要深度探討</em> <br />
+裡面有很多內容尚未完整，等待更新，有錯誤請勿必告知</p>
+</blockquote>
+<hr />
+<p><strong>[chapter 1]程式設計</strong></p>
+<p>language：c<br />
+textbook: none</p>
+<ul>
+<li><input disabled="" type="checkbox"/>
+<a href="./programming-design/ch1_0.html">I/O</a>
+<ul>
+<li><input disabled="" type="checkbox"/>
+format</li>
+<li><input disabled="" type="checkbox"/>
+input</li>
+<li><input disabled="" type="checkbox"/>
+output</li>
+</ul>
+</li>
+<li><input disabled="" type="checkbox"/>
+type
+<ul>
+<li><input disabled="" type="checkbox"/>
+declare</li>
+<li><input disabled="" type="checkbox"/>
+const</li>
+<li><input disabled="" type="checkbox"/>
+static</li>
+</ul>
+</li>
+<li><input disabled="" type="checkbox"/>
+flow
+<ul>
+<li><input disabled="" type="checkbox"/>
+if else</li>
+<li><input disabled="" type="checkbox"/>
+switch</li>
+<li><input disabled="" type="checkbox"/>
+ternary operator</li>
+</ul>
+</li>
+<li><input disabled="" type="checkbox"/>
+loop
+<ul>
+<li><input disabled="" type="checkbox"/>
+for</li>
+<li><input disabled="" type="checkbox"/>
+while</li>
+<li><input disabled="" type="checkbox"/>
+do while</li>
+</ul>
+</li>
+<li><input disabled="" type="checkbox"/>
+function
+<ul>
+<li><input disabled="" type="checkbox"/>
+declare</li>
+<li><input disabled="" type="checkbox"/>
+recursive</li>
+</ul>
+</li>
+<li><input disabled="" type="checkbox"/>
+pointer
+<ul>
+<li><input disabled="" type="checkbox"/>
+declare</li>
+<li><input disabled="" type="checkbox"/>
+refrence &amp; dereference</li>
+</ul>
+</li>
+<li><input disabled="" type="checkbox"/>
+string
+<ul>
+<li><input disabled="" type="checkbox"/>
+functions 1</li>
+<li><input disabled="" type="checkbox"/>
+functions 2</li>
+</ul>
+</li>
+<li><input disabled="" type="checkbox"/>
+memory
+<ul>
+<li><input disabled="" type="checkbox"/>
+address</li>
+<li><input disabled="" type="checkbox"/>
+dispatch</li>
+</ul>
+</li>
+<li><input disabled="" type="checkbox"/>
+bitwise
+<ul>
+<li><input disabled="" type="checkbox"/>
+operation</li>
+<li><input disabled="" type="checkbox"/>
+useful example</li>
+</ul>
+</li>
+<li><input disabled="" type="checkbox"/>
+advanced type</li>
+<li><input disabled="" type="checkbox"/>
+advanced function</li>
+</ul>
+<hr />
+<p><strong>[chapter 2]系統程式</strong></p>
+<p>language：c<br />
+textbook: advanced programming in UNIX environment</p>
+<div style="break-before: page; page-break-before: always;"></div><div style="break-before: page; page-break-before: always;"></div><h1 id="chapter-1-io"><a class="header" href="#chapter-1-io">Chapter 1 I/O</a></h1>
+<hr />
+<p>this chapter contains three page:</p>
+<ul>
+<li><input disabled="" type="checkbox" checked=""/>
+format</li>
+<li><input disabled="" type="checkbox" checked=""/>
+input</li>
+<li><input disabled="" type="checkbox" checked=""/>
+output</li>
+</ul>
+<blockquote>
+<p><strong>Note:</strong> <br />
+since I/O mostly contains the concept of string, so the chapter <strong>string</strong> may include some extra package, and this chap also simple explain of string.h package</p>
+</blockquote>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="format"><a class="header" href="#format">format</a></h1>
+<hr />
+<p>before writing the most simple program hello world, i think it's essential to understanding the formatting first.</p>
+<p>reference to <a href="https://www.tutorialspoint.com/format-specifiers-in-c">Format specifiers in C</a> we can see that there are tons of format that fit each type.</p>
+<table><thead><tr><th>Format Specifier</th><th>Type</th></tr></thead><tbody>
+<tr><td>%c</td><td>Character</td></tr>
+<tr><td>%d</td><td>Signed integer</td></tr>
+<tr><td>%e or %E</td><td>Scientific notation of floats</td></tr>
+<tr><td>%f</td><td>Float values</td></tr>
+<tr><td>%g or %G</td><td>Similar as %e or %E</td></tr>
+<tr><td>%hi</td><td>Signed integer (short)</td></tr>
+<tr><td>%hu</td><td>Unsigned Integer (short)</td></tr>
+<tr><td>%i</td><td>Unsigned integer</td></tr>
+<tr><td>%l or %ld or %li</td><td>Long</td></tr>
+<tr><td>%lf</td><td>Double</td></tr>
+<tr><td>%Lf</td><td>Long double</td></tr>
+<tr><td>%lu</td><td>Unsigned int or unsigned long</td></tr>
+<tr><td>%lli or %lld</td><td>Long long</td></tr>
+<tr><td>%llu</td><td>Unsigned long long</td></tr>
+<tr><td>%o</td><td>8進位</td></tr>
+<tr><td>%p</td><td>Pointer</td></tr>
+<tr><td>%s</td><td>String</td></tr>
+<tr><td>%u</td><td>Unsigned int</td></tr>
+<tr><td>%x or %X</td><td>16進位</td></tr>
+<tr><td>%n</td><td>Prints nothing</td></tr>
+<tr><td>%%</td><td>Prints % character</td></tr>
+</tbody></table>
+<p>one of the notice is the last one, we can see that % is similar to \ , both of which make the origin word transfer to other meaning. we'll describe the \ symbol in next part </p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="input"><a class="header" href="#input">input</a></h1>
+<hr />
+<h3 id="1scanf"><a class="header" href="#1scanf">1.scanf</a></h3>
+<pre><code class="language-c">int main(){
+  int a;
+  scanf(&quot;%d&quot;,&amp;a);
+}
+</code></pre>
+<blockquote>
+<p><strong>Note</strong> <br /></p>
+<ul>
+<li>若變數有很多個請用迴圈然後直輸入進陣列位置</li>
+<li>不要在&quot;%d&quot;後面加&quot;\n&quot;</li>
+</ul>
+</blockquote>
+<h3 id="2getchar"><a class="header" href="#2getchar">2.getchar</a></h3>
+<pre><code class="language-c">int main(){
+  char ch;
+  ch = getchar();
+}
+</code></pre>
+<blockquote>
+<p><strong>Note</strong> <br /></p>
+<ul>
+<li>可以使用&quot;(ch = getchar()) != EOF&quot;當做判斷式放入while或if</li>
+<li>getchar()會讀到使用者輸入enter為止，所以字串題要用char才能讀到空格</li>
+</ul>
+</blockquote>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="output"><a class="header" href="#output">output</a></h1>
+<hr />
+<h3 id="1printf"><a class="header" href="#1printf">1.printf</a></h3>
+<pre><code class="language-c">int main(){
+  printf(&quot;hello world\n&quot;);
+}
+</code></pre>
+<blockquote>
+<p><strong>Note</strong> <br /></p>
+<ul>
+<li>%s會自動讀到字串陣列結尾（可記可不記？）</li>
+<li>型態前面加數字是留n個空格，小數點後則是輸出到小數點第n位</li>
+</ul>
+</blockquote>
+<h3 id="2putchar"><a class="header" href="#2putchar">2.putchar</a></h3>
+<blockquote>
+<p>--不要用putchar--putchar在之後的string章節詳談</p>
+</blockquote>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="chapter-2-type"><a class="header" href="#chapter-2-type">Chapter 2 type</a></h1>
+<hr />
+<p>this chapter contains two page:</p>
+<ul>
+<li><input disabled="" type="checkbox" checked=""/>
+declare</li>
+<li><input disabled="" type="checkbox" checked=""/>
+const</li>
+<li><input disabled="" type="checkbox" checked=""/>
+static</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="declare"><a class="header" href="#declare">declare</a></h1>
+<hr />
+<h3 id="1initiate-variable"><a class="header" href="#1initiate-variable">1.initiate variable</a></h3>
+<pre><code class="language-c">int main(){
+  type variable;
+  type variable = parameter;
+
+  type var1,var2;
+  type var1,var2 = para1,para2;
+}
+</code></pre>
+<blockquote>
+<p><strong>Note</strong> <br /></p>
+<ul>
+<li>初始化通常意旨賦予值，賦予值不一定只能是新值，也有可能是從別的變數給的值</li>
+</ul>
+</blockquote>
+<h3 id="2initiate-array"><a class="header" href="#2initiate-array">2.initiate array</a></h3>
+<pre><code class="language-c">int main(){
+  type name_array[length];
+}
+</code></pre>
+<blockquote>
+<p><strong>Note</strong> <br /></p>
+<ul>
+<li>length必須是常數，若為使用者輸入才初始化的變數會出錯</li>
+<li>char的二維陣列很麻煩，實做應該不會考，但有興趣可以參考<a href="https://www.knowprogram.com/c-programming/2d-array-of-strings-in-c/">char的二維陣列</a></li>
+</ul>
+</blockquote>
+<h3 id="3initiate-array"><a class="header" href="#3initiate-array">3.initiate array</a></h3>
+<pre><code class="language-c">int main(){
+  // all elements in nums are 0
+  int nums[10] = {0};
+  // only initialize the first element
+  int nums2[10] = {[0] = 100};
+}
+</code></pre>
+<blockquote>
+<p><strong>Note</strong> <br /></p>
+<ul>
+<li>第二個例子後面還可再加{[0] = 100,[9] = 20};以此類推</li>
+</ul>
+</blockquote>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="const"><a class="header" href="#const">const</a></h1>
+<hr />
+<h3 id="1const"><a class="header" href="#1const">1.const</a></h3>
+<pre><code class="language-c">int main(){
+  const a = 10;
+}
+</code></pre>
+<blockquote>
+<p><strong>Note</strong> <br /></p>
+<ul>
+<li>const雖然不會變，但有<a href="https://stackoverflow.com/questions/12104839/how-to-modify-value-of-const-variable/31583505">黑魔法</a></li>
+</ul>
+</blockquote>
+<h3 id="2define"><a class="header" href="#2define">2.define</a></h3>
+<pre><code class="language-c">#define A 10
+#define F(a,b) (a) * (b)
+</code></pre>
+<blockquote>
+<p><strong>Note</strong> <br /></p>
+<ul>
+<li>雖然可能不會考，但第二個例子要加括號，ex：a = 5 + 9 ; b = 1 + 7 ; f(a,b) = 21</li>
+<li>define變數名稱全部大寫（大家都這麼做）</li>
+<li>macro 後面開一篇</li>
+</ul>
+</blockquote>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="static"><a class="header" href="#static">static</a></h1>
+<h3 id="1static"><a class="header" href="#1static">1.static</a></h3>
+<pre><code class="language-c">void function(){
+  static int temp = 0;
+  temp++;
+}
+</code></pre>
+<blockquote>
+<p><strong>Note</strong> <br /></p>
+<ul>
+<li>static start with 0 in this example，但在每次呼叫function後static值變不再初始化</li>
+<li><a href="https://iq.opengenus.org/static-and-extern-pointers-in-c/">static pointer</a>有點進階，但還是可以看看</li>
+<li><a href="programming-design/">static function</a>之後再補</li>
+</ul>
+</blockquote>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="chapter-3-flow"><a class="header" href="#chapter-3-flow">Chapter 3 flow</a></h1>
+<hr />
+<p>this chapter contains three page:</p>
+<ul>
+<li><input disabled="" type="checkbox" checked=""/>
+if else</li>
+<li><input disabled="" type="checkbox" checked=""/>
+switch</li>
+<li><input disabled="" type="checkbox" checked=""/>
+ternary operator</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="if-else"><a class="header" href="#if-else">if else</a></h1>
+<hr />
+<div style="break-before: page; page-break-before: always;"></div><h1 id="switch"><a class="header" href="#switch">switch</a></h1>
+<hr />
+<div style="break-before: page; page-break-before: always;"></div><h1 id="ternary-operator"><a class="header" href="#ternary-operator">ternary operator</a></h1>
+<hr />
+<h3 id="ternary-operator-1"><a class="header" href="#ternary-operator-1">ternary operator</a></h3>
+<pre><code class="language-c">int a = condition ? 0 : 1;
+</code></pre>
+<blockquote>
+<p><strong>Note</strong> <br /></p>
+<ul>
+<li>? 後面是 condition 為 true的情況，反之</li>
+<li>三元運算可以用在函數回傳或判斷</li>
+</ul>
+</blockquote>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="chapter-4-loop"><a class="header" href="#chapter-4-loop">Chapter 4 loop</a></h1>
+<hr />
+<p>this chapter contains three page:</p>
+<ul>
+<li><input disabled="" type="checkbox" checked=""/>
+for</li>
+<li><input disabled="" type="checkbox" checked=""/>
+while</li>
+<li><input disabled="" type="checkbox" checked=""/>
+do while</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="for"><a class="header" href="#for">for</a></h1>
+<hr />
+<h3 id="1for---basic"><a class="header" href="#1for---basic">1.for --basic</a></h3>
+<pre><code class="language-c">int main(){
+  for(object;ending condition;change of object){
+    do something
+  }
+}
+</code></pre>
+<blockquote>
+<p><strong>Note</strong> <br /></p>
+<ul>
+<li>for迴圈都只做&quot;知道次數&quot;的事情（好像也不用我說ww）</li>
+<li>for迴圈放指標的話通常都是到一個東西的結束位置符，舉字串為例：for (p = str; *p != '\0'; p++)</li>
+</ul>
+</blockquote>
+<h3 id="2for---advanced"><a class="header" href="#2for---advanced">2.for --advanced</a></h3>
+<p>嘗試理解下面迴圈的不同</p>
+<pre><code class="language-c">int main(){
+  int cnt = 0;
+  for(;cnt &lt; 10;cnt+=2){
+
+  }
+}
+</code></pre>
+<pre><code class="language-c">int main(){
+  int cnt = 10;
+  for(;cnt &gt; 10;cnt-=2){
+
+  }
+}
+</code></pre>
+<pre><code class="language-c">int main(){
+  int cnt = 10;
+  for(;cnt &lt; 100;cnt = cnt+cnt/2){
+
+  }
+}
+</code></pre>
+<h3 id="可以看到for其實就是藉由變數變化來跑次數的"><a class="header" href="#可以看到for其實就是藉由變數變化來跑次數的">可以看到for其實就是藉由變數變化來跑次數的</a></h3>
+<h3 id="3for---advanced-again"><a class="header" href="#3for---advanced-again">3.for --advanced again</a></h3>
+<pre><code class="language-c">int main(){
+  for (int i = 0,j = 10; i &lt; 10, j &gt; 0; i++,j--) {
+    do something
+  }
+}
+</code></pre>
+<blockquote>
+<p><strong>Note</strong> <br /></p>
+<ul>
+<li>可放多變數，當其中一個符合中止條件就結束迴圈</li>
+<li>comma operation我覺得TA寫的很清楚，可以過去看<a href="https://hackmd.io/@pQ_ht4xxRxKiytzM9m_aKw/B1WoFZD8F">comma operation</a></li>
+</ul>
+</blockquote>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="while"><a class="header" href="#while">while</a></h1>
+<hr />
+<h3 id="1while"><a class="header" href="#1while">1.while</a></h3>
+<pre><code class="language-c">int main(){
+  while (condition is true) {
+    do something
+  }
+}
+</code></pre>
+<blockquote>
+<p><strong>Note</strong> <br /></p>
+<ul>
+<li>while迴圈都只做&quot;不知道次數&quot;的事情（不用我說again）</li>
+<li>while 其實就是 for(; ending condition ;)，不用特別記</li>
+</ul>
+</blockquote>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="do-while"><a class="header" href="#do-while">do while</a></h1>
+<hr />
+<h3 id="1do-while"><a class="header" href="#1do-while">1.do while</a></h3>
+<pre><code class="language-c">int main(){
+  do{
+    do something
+  }while(condition is true);
+}
+</code></pre>
+<blockquote>
+<p><strong>Note</strong> <br /></p>
+<ul>
+<li>do while一定會先做一次，不過通常還是用while比較多</li>
+</ul>
+</blockquote>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="chapter-5-function"><a class="header" href="#chapter-5-function">Chapter 5 function</a></h1>
+<hr />
+<p>this chapter contains two page:</p>
+<ul>
+<li><input disabled="" type="checkbox" checked=""/>
+declare</li>
+<li><input disabled="" type="checkbox" checked=""/>
+recursive</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="declare-1"><a class="header" href="#declare-1">declare</a></h1>
+<hr />
+<h3 id="1declare"><a class="header" href="#1declare">1.declare</a></h3>
+<pre><code class="language-c">return_type function_name(type parameter, ...){
+  do something
+  return return_type;
+}
+</code></pre>
+<h3 id="注意"><a class="header" href="#注意">注意</a></h3>
+<ul>
+<li>在function裡面宣告矩陣最後會被清掉，所以記得用malloc</li>
+<li>function可以直接讀到extern variable</li>
+<li>想用function修改main裡面的值記得要用pointer</li>
+</ul>
+<h3 id="2傳入二維陣列"><a class="header" href="#2傳入二維陣列">2.傳入二維陣列</a></h3>
+<pre><code class="language-c">return_type function_name(type list[][the length of list[i]]){
+  do something
+  return return_type;
+}
+</code></pre>
+<h3 id="注意-1"><a class="header" href="#注意-1">注意</a></h3>
+<ul>
+<li>function傳入二維陣列要在後面的括號中加入長度</li>
+<li>通常這麼做會很麻煩，所以還是乖乖傳pointer吧</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="recursive"><a class="header" href="#recursive">recursive</a></h1>
+<hr />
+<h3 id="1-declare"><a class="header" href="#1-declare">1. declare</a></h3>
+<p>觀察下面三種遞迴的不同</p>
+<pre><code class="language-c">return_type function_name(type parameter, ...){
+  do something（end recursive condition）
+  if(...){
+    get_return = function_name(type parameter, ...);
+  }
+  do something
+  return return_type;
+}
+</code></pre>
+<pre><code class="language-c">return_type function_name(type parameter, ...){
+  do something
+  if(...){
+    get_return = function_name(type parameter, ...);
+  }
+  do something（end recursive condition）
+  return return_type;
+}
+</code></pre>
+<pre><code class="language-c">return_type function_name(type parameter, ...){
+  do something（end recursive）
+  return function_name(type parameter, ...);
+}
+</code></pre>
+<h3 id="注意-2"><a class="header" href="#注意-2">注意</a></h3>
+<ul>
+<li>遞迴必要的兩個條件：結束和繼續，所以通常結束遞迴會用一個if包起來，繼續遞迴也會用一個if包起來</li>
+<li>最簡單的說法就是，把遞迴那一行的上面看成一個&quot;函式&quot;來編寫，同理，下面那一行也看成一個&quot;函式&quot;來編寫</li>
+<li>第三個範例通常就是已經背最簡化的寫法，可以試試看寫成上面兩種形式</li>
+</ul>
+<h3 id="2背背背"><a class="header" href="#2背背背">2.背背背</a></h3>
+<p>了借後就是背一些常用的遞迴</p>
+<pre><code class="language-c">int gcd(int n1, int n2) {
+    if (n2 != 0)
+        return gcd(n2, n1 % n2);
+    else
+        return n1;
+}
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="pointer"><a class="header" href="#pointer">pointer</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="declare-2"><a class="header" href="#declare-2">declare</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="refrence--dereference"><a class="header" href="#refrence--dereference">refrence &amp; dereference</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="chapter-1-unix-system-overview"><a class="header" href="#chapter-1-unix-system-overview">Chapter 1 unix system overview</a></h1>
+<hr />
+<div style="break-before: page; page-break-before: always;"></div><h1 id="shell"><a class="header" href="#shell">shell</a></h1>
+<hr />
+<p>shell is acutally a program that provide user an interface to react to the system, and almost every commands we type into shell connect to a program to do the things we want.</p>
+<p>here are some common shell used on UNIX systems</p>
+<table><thead><tr><th>Name</th><th>Path</th></tr></thead><tbody>
+<tr><td>Bourne shell</td><td>/bin/sh</td></tr>
+<tr><td>Bourne-again shell</td><td>/bin/bash</td></tr>
+<tr><td>C shell</td><td>/bin/csh</td></tr>
+<tr><td>Korn shell</td><td>/bin/ksh</td></tr>
+<tr><td>TENEX shell</td><td>/bin/tcsh</td></tr>
+</tbody></table>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="file-and-directory"><a class="header" href="#file-and-directory">file and directory</a></h1>
+<hr />
+<h3 id="1-file-system"><a class="header" href="#1-file-system">1. File System</a></h3>
+<p>file system is a arrangement of directories and files. everything starts in the directory called root, whose name is the single character /</p>
+<p>The attributes of a file are the thing that describe the file such as size,owner,permission and so on. we can use stat or fstat function to see the attributes of a file. we'll include in future.</p>
+<h3 id="2-filename"><a class="header" href="#2-filename">2. Filename</a></h3>
+<p>the file name in UNIX system can only contain letters,numbers,period(.),dash(-) and underscore(_).</p>
+<p>two files are automatically created when a directory is created: &quot;.&quot; and &quot;..&quot;
+respectedly represent current and parent directory</p>
+<h3 id="3-pathname"><a class="header" href="#3-pathname">3. Pathname</a></h3>
+<p>absolute and relative pathname refer to relation of the current directory(or data). the root file system is a special-case absolute pathname</p>
+<h3 id="4-ls-command"><a class="header" href="#4-ls-command">4. ls command</a></h3>
+<pre><code class="language-c">#include &quot;apeu.h&quot;
+#include &quot;dirent.h&quot;
+
+int
+main(int argc, char *argv[])
+{
+    DIR   *dp;
+    struct dirent *dirp;
+
+    if(argc != 2)
+      err_quit(&quot;usage: ls directory_name&quot;);
+
+    if((dp = opendir(argv[1])) == NULL)
+      err_sys(&quot;can't open %s&quot;, argv[1]);
+
+    while((dirp = readdir(dp)) != NULL)
+      printf(&quot;%s\n&quot;, dirp-&gt;d_name);
+
+    closedir(dp);
+    exit(0);
+}
+</code></pre>
+<p>first we include a file called apeu, which contains many error expection(the function or macro start with &quot;err&quot; often are from apeu.h)</p>
+<p>second we check the input and see if we can open it.</p>
+<p>and while we can read it, print it out(remember the &quot;.&quot; and &quot;..&quot; will alse be printed out)</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="input-and-output"><a class="header" href="#input-and-output">input and output</a></h1>
+<hr />
+<h3 id="1file-descriptors"><a class="header" href="#1file-descriptors">1.file descriptors</a></h3>
+<p>file descriptors are the integers that the kernel uses to identify the files accessed by a process.</p>
+<h3 id="2standard-input-output-and-error"><a class="header" href="#2standard-input-output-and-error">2.standard input output and error</a></h3>
+<p>all shells open three file descriptors while a new program runs: standard input output and error.</p>
+<blockquote>
+<p><strong>Note:</strong></p>
+<ul>
+<li>file descriptor 1 is a processes' stdout</li>
+<li>file descriptor 0 is a processes' stdin</li>
+<li>file descriptor 2 is a processes' stderr</li>
+</ul>
+</blockquote>
+<h3 id="3unbuffered-io"><a class="header" href="#3unbuffered-io">3.unbuffered I/O</a></h3>
+<p>unbuffered I/O is provided by functions: open read write lseek and close.
+these are all work with file descriptors.</p>
+<h3 id="4standard-io"><a class="header" href="#4standard-io">4.standard I/O</a></h3>
+<p>standard I/O functions provide a buffered interface to the unbuffered I/O functions. using standard I/O rely on users choose buffer size, and it provides functions that let us control the style of buffering used by library.</p>
+<pre><code class="language-c">#include &quot;apue.h&quot;
+
+int
+main(void)
+{
+  int c;
+  while((c = getc(stdin)) != EOF)
+    if(putc(c, stdout) == EOF)
+      err_sys(&quot;output error&quot;);
+
+  if(ferror(stdin))
+    err_sys(&quot;input error&quot;);
+
+  exit(0);
+}
+</code></pre>
+<p>this is an example of copy standard input to standard output.</p>
+<h3 id="5redirect-in-command"><a class="header" href="#5redirect-in-command">5.redirect in command</a></h3>
+<p>we can use &quot;&gt;&quot; or &quot;&lt;&quot; to direct the place we want the thing to go.</p>
+<pre><code>$ ls &gt; record.txt
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="program-and-process"><a class="header" href="#program-and-process">program and process</a></h1>
+<hr />
+<h3 id="process-id"><a class="header" href="#process-id">process id</a></h3>
+<pre><code class="language-c">#include &quot;apue.h&quot;
+
+int
+main(void)
+{
+  printf(&quot;hello world from process ID %ld\n&quot;, (long)getpid());
+  exit(0);
+}
+</code></pre>
+<p>this is an example of getting pid in c.</p>
+<h3 id="process-control"><a class="header" href="#process-control">process control</a></h3>
+<p>there are some functions for process control: fork, exec, and waitpid</p>
+<p>fork() will return a pid and meanwhile the program fork to two process and do the parent child process according the blow program</p>
+<p>waitpid() can be used to determine the different pid such as parent and child, we can use this to separate the program of parent child doing.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="user-identification"><a class="header" href="#user-identification">user identification</a></h1>
+<hr />
+<h3 id="uid-and-gid"><a class="header" href="#uid-and-gid">uid and gid</a></h3>
+<p>user ID(uid) comes from the login behavior and which is assigned by the system adminstrator. we cannot change uid and it is unique to every users.</p>
+<p>we call the user whose uid is 0 as root or superuser.</p>
+<p>group ID(gid) is alse assigned by the system adminstrator. groups are often used to collect users together into projects or departments. thsi allow sharing resources and files within the same gid.</p>
+<p>the group file /etc/group maps group names into gid.</p>
+<pre><code class="language-c">#include &quot;apue.h&quot;
+
+int
+main(void)
+{
+  printf(&quot;uid = %d, gid = %d\n&quot;, getuid(), getgid());
+  exit(0);
+}
+</code></pre>
+<p>an example of get a user's uid and gid</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="time-value"><a class="header" href="#time-value">time value</a></h1>
+<hr />
+<h3 id="time"><a class="header" href="#time">time</a></h3>
+<p>there are three time values: real, user, and system time.</p>
+<ul>
+<li>real time or clock time, is the amout of time a process takes to run.</li>
+<li>user time or user CPU time, is the CPU time attributes to user instructions.</li>
+<li>system time or system CPU time, is the CPU time attributes to kernel instructions.</li>
+</ul>
+<p>the simplest way to see these time is using <strong>time</strong> command:</p>
+<pre><code>$ time -p ./a.out (or any other program)
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="chapter-3-file-io"><a class="header" href="#chapter-3-file-io">Chapter 3 file i/o</a></h1>
+<hr />
+<div style="break-before: page; page-break-before: always;"></div><h1 id="file-descriptors"><a class="header" href="#file-descriptors">file descriptors</a></h1>
+<hr />
+<p>To the kernel, all open files are referred to by file descriptors.</p>
+<p>File descriptors range from 0 through OPEN_MAX−1.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="open-function"><a class="header" href="#open-function">open function</a></h1>
+<hr />
+<h3 id="open-and-openat"><a class="header" href="#open-and-openat">open and openat</a></h3>
+<p>Both return: file descriptor if OK, −1 on error</p>
+<pre><code class="language-c">#include &lt;fcntl.h&gt;
+int open(const char *path, int oflag, ... /* mode_t mode */ );
+int openat(int fd, const char *path, int oflag, ... /* mode_t mode */ );
+</code></pre>
+<h3 id="oflag"><a class="header" href="#oflag">oflag</a></h3>
+<table><thead><tr><th>oflag</th><th>meaning</th></tr></thead><tbody>
+<tr><td>O_RDONLY</td><td>Open for reading only.</td></tr>
+<tr><td>O_WRONLY</td><td>Open for writing only.</td></tr>
+<tr><td>O_RDWR</td><td>Open for reading and writing.</td></tr>
+<tr><td>O_EXEC</td><td>Open for execute only.</td></tr>
+<tr><td>O_SEARCH</td><td>Open for search only (applies to directories).</td></tr>
+<tr><td></td><td></td></tr>
+<tr><td>O_APPEND</td><td>append on each write</td></tr>
+<tr><td>O_NONBLOCK</td><td>nonblocking mode</td></tr>
+<tr><td>O_SYNC</td><td>wait for writes to complete (data and attributes)</td></tr>
+<tr><td>O_DSYNC</td><td>wait for writes to complete (data only)</td></tr>
+<tr><td>O_RSYNC</td><td>synchronize reads and writes</td></tr>
+<tr><td>O_FSYNC</td><td>wait for writes to complete (FreeBSD and Mac OS X only)</td></tr>
+<tr><td>O_ASYNC</td><td>asynchronous I/O (FreeBSD and Mac OS X only)</td></tr>
+</tbody></table>
+<p>Most implementations define O_RDONLY as 0, O_WRONLY as 1, and O_RDWR as 2, for compatibility with older programs.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="creat-function"><a class="header" href="#creat-function">creat function</a></h1>
+<hr />
+<h3 id="creat"><a class="header" href="#creat">creat</a></h3>
+<pre><code class="language-c">#include &lt;fcntl.h&gt;
+int creat(const char *path, mode_t mode);
+</code></pre>
+<p>Returns: file descriptor opened for write-only if OK, −1 on error</p>
+<p>Note that this function is equivalent to</p>
+<pre><code class="language-c">open(path, O_WRONLY | O_CREAT | O_TRUNC, mode);
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="close-function"><a class="header" href="#close-function">close function</a></h1>
+<hr />
+<h3 id="close"><a class="header" href="#close">close</a></h3>
+<pre><code class="language-c">#include &lt;unistd.h&gt;
+int close(int fd);
+</code></pre>
+<p>Returns: 0 if OK, −1 on error</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="lseek-function"><a class="header" href="#lseek-function">lseek function</a></h1>
+<hr />
+<h3 id="offset"><a class="header" href="#offset">offset</a></h3>
+<p>Every open file has an associated ‘‘current file offset,’’, which</p>
+<h3 id="lseek"><a class="header" href="#lseek">lseek</a></h3>
+<pre><code class="language-c">#include &lt;unistd.h&gt;
+off_t lseek(int fd, off_t offset, int whence);
+</code></pre>
+<p>Returns: new file offset if OK, −1 on error</p>
+<h3 id="whence"><a class="header" href="#whence">whence</a></h3>
+<p>whence is also a flag similar to oflag</p>
+<table><thead><tr><th>whence</th><th>set offset</th></tr></thead><tbody>
+<tr><td>SEEK_SET</td><td>offset is set to offset bytes from the beginning thefile.</td></tr>
+<tr><td>SEEK_CUR</td><td>offset is set to its current value plus the offset.</td></tr>
+<tr><td>SEEK_END</td><td>offset is set to the size of the file plus the offset.</td></tr>
+</tbody></table>
+<p>The offset can be positive or negative.</p>
+<blockquote>
+<p><strong>Note</strong>
+If the file descriptor refers to a pipe, FIFO , or socket, lseek sets errno to ESPIPE and returns −1.</p>
+</blockquote>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="read-function"><a class="header" href="#read-function">read function</a></h1>
+<hr />
+<h3 id="read"><a class="header" href="#read">read</a></h3>
+<pre><code class="language-c">#include &lt;unistd.h&gt;
+ssize_t read(int fd, void *buf, size_t nbytes);
+</code></pre>
+<p>Returns: number of bytes read, 0 if end of file, −1 on error</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="write-function"><a class="header" href="#write-function">write function</a></h1>
+<hr />
+<h3 id="write"><a class="header" href="#write">write</a></h3>
+<pre><code class="language-c">#include &lt;unistd.h&gt;
+ssize_t write(int fd, const void *buf, size_t nbytes);
+</code></pre>
+<p>Returns: number of bytes written if OK, −1 on error</p>
+<p>this function is used as an example as unbuffered I/O and the buf means the buffer, the nbytes means the size of that buffer.<br />
+when doing write function, we dont need to allocate a space in real memory space since the function is unbuffered and the time we use this function in our program, the system actual write the data into the disk.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="file-sharing"><a class="header" href="#file-sharing">file sharing</a></h1>
+<hr />
+<p>The kernel uses three data structures to represent an open file,</p>
+<h3 id="process-table"><a class="header" href="#process-table">process table.</a></h3>
+<p>Every process has an entry in the process table. within the entry, there's a table of open file descriptors. which we can think of as a vector, with one entry per descriptor, associated with each file descriptor are</p>
+<h3 id="file-table"><a class="header" href="#file-table">file table</a></h3>
+<p>The kernel maintains a file table for all open files.</p>
+<h3 id="v-node"><a class="header" href="#v-node">v-node</a></h3>
+<p>v-node also contains the i-node for the file.</p>
+<blockquote>
+<p>Why we need a file table entry link to vnode instead same vnode?</p>
+</blockquote>
+<p>since there may have two program open a file at the same time but if both need to write to the file. the node may have the false offset to write(maybe one of the program write successful, but when another try to write, the file is changed ), so we need file table(which have 'current file offset' parameter in it) to help us dodge the error of offset</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="dup-and-dup2-function"><a class="header" href="#dup-and-dup2-function">dup and dup2 function</a></h1>
+<hr />
+<h3 id="duplicate"><a class="header" href="#duplicate">duplicate</a></h3>
+<pre><code class="language-c">#include &lt;unistd.h&gt;
+int dup(int fd);
+int dup2(int fd, int fd2);
+</code></pre>
+<p>Both return: new file descriptor if OK, −1 on error</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="sync-fsync-and-fdatasync-function"><a class="header" href="#sync-fsync-and-fdatasync-function">sync fsync and fdatasync function</a></h1>
+<hr />
+<h3 id="fsync-and-fdatasync"><a class="header" href="#fsync-and-fdatasync">fsync and fdatasync</a></h3>
+<pre><code class="language-c">#include &lt;unistd.h&gt;
+int fsync(int fd);
+int fdatasync(int fd);
+</code></pre>
+<p>Returns: 0 if OK, −1 on error</p>
+<h3 id="sync"><a class="header" href="#sync">sync</a></h3>
+<pre><code class="language-c">#include &lt;unistd.h&gt;
+void sync(void);
+</code></pre>
+<p>the sync function simply queues all the modified block buffers for writing and returns. it does not wait for the disk writes to take place.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="fcntl-function"><a class="header" href="#fcntl-function">fcntl function</a></h1>
+<hr />
+<h3 id="fnctl"><a class="header" href="#fnctl">fnctl</a></h3>
+<pre><code class="language-c">#include &lt;fcntl.h&gt;
+int fcntl(int fd, int cmd, ... /* int arg */ );
+</code></pre>
+<p>Returns: depends on cmd if OK (see following), −1 on error</p>
+<h3 id="purpose"><a class="header" href="#purpose">purpose</a></h3>
+<p>The fcntl function is used for five different purposes.</p>
+<ol>
+<li>Duplicate an existing descriptor (cmd = F_DUPFD or F_DUPFD_CLOEXEC)</li>
+<li>Get/set file descriptor flags (cmd = F_GETFD or F_SETFD)</li>
+<li>Get/set file status flags (cmd = F_GETFL or F_SETFL)</li>
+<li>Get/set asynchronous I/O ownership (cmd = F_GETOWN or F_SETOWN)</li>
+<li>Get/set record locks (cmd = F_GETLK, F_SETLK, or F_SETLKW)</li>
+</ol>
+<h3 id="cmd"><a class="header" href="#cmd">cmd</a></h3>
+<table><thead><tr><th>cmd</th><th>descriptors</th></tr></thead><tbody>
+<tr><td>F_DUPFD</td><td>Duplicate the file descriptor fd. The new file descriptor is returned as the value of the function. It is the lowest-numbered descriptor that is not already open, and that is greater than or equal to the third argument (taken as an integer). The new descriptor shares the same file table entry as fd. (Refer to Figure 3.9.) But the new descriptor has its own set of file descriptor flags, and its FD_CLOEXEC file descriptor flag is cleared. (This means that the descriptor is left open across an exec, which we discuss in Chapter 8.)</td></tr>
+<tr><td>F_DUPFD_CLOEXEC</td><td>Duplicate the file descriptor and set the FD_CLOEXEC file descriptor flag associated with the new descriptor. Returns the new file descriptor.</td></tr>
+<tr><td>F_GETFD</td><td>Return the file descriptor flags for fd as the value of the function. Currently, only one file descriptor flag is defined: the FD_CLOEXEC flag.</td></tr>
+<tr><td>F_SETFD</td><td>Set the file descriptor flags for fd. The new flag value is set from the third argument (taken as an integer).</td></tr>
+<tr><td>F_GETFL</td><td>Return the file status flags for fd as the value of the function. We described the file status flags when we described the open function. They are listed in Figure 3.10. Unfortunately, the five access-mode flags—O_RDONLY, O_WRONLY, O_RDWR, O_EXEC, and O_SEARCH—are not separate bits that can be tested. (As we mentioned earlier, the first three often have the values 0, 1, and 2, respectively, for historical reasons. Also, these five values are mutually exclusive; a file can have only one of them enabled.) Therefore, we must first use the O_ACCMODE mask to obtain the access-mode bits and then compare the result against any of the five values.</td></tr>
+<tr><td>F_SETFL</td><td>Set the file status flags to the value of the third argument (taken as an integer). The only flags that can be changed are O_APPEND, O_NONBLOCK, O_SYNC, O_DSYNC, O_RSYNC, O_FSYNC, and O_ASYNC.</td></tr>
+<tr><td>F_GETOWN</td><td>Get the process ID or process group ID currently receiving the SIGIO and SIGURG signals. We describe these asynchronous I/O signals in Section 14.5.2.</td></tr>
+<tr><td>F_SETOWN</td><td>Set the process ID or process group ID to receive the SIGIO and SIGURG signals. A positive arg specifies a process ID. A negative arg implies a process group ID equal to the absolute value of arg.</td></tr>
+</tbody></table>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="ioctl-function"><a class="header" href="#ioctl-function">ioctl function</a></h1>
+<hr />
+<h3 id="ioctl"><a class="header" href="#ioctl">ioctl</a></h3>
+<pre><code class="language-c">#include &lt;unistd.h&gt;       /* System V */
+#include &lt;sys/ioctl.h&gt;    /* BSD and Linux */
+int ioctl(int fd, int request, ...);
+</code></pre>
+<p>Returns: −1 on error, something else if OK</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="files-and-diectories"><a class="header" href="#files-and-diectories">files and diectories</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="stat-function"><a class="header" href="#stat-function">stat function</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="file-type"><a class="header" href="#file-type">file type</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="set-uid--set-gid"><a class="header" href="#set-uid--set-gid">set uid &amp; set gid</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="file-access-permision"><a class="header" href="#file-access-permision">file access permision</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="access-and-faccessat-function"><a class="header" href="#access-and-faccessat-function">access and faccessat function</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="umask-function"><a class="header" href="#umask-function">umask function</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="chmod-fchmod-and-fchmodat-function"><a class="header" href="#chmod-fchmod-and-fchmodat-function">chmod, fchmod, and fchmodat function</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="file-truncation"><a class="header" href="#file-truncation">file truncation</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="link-linkat-unlink-unlinkat-and-remove-function"><a class="header" href="#link-linkat-unlink-unlinkat-and-remove-function">link, linkat, unlink, unlinkat, and remove function</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="rename-and-renameat-function"><a class="header" href="#rename-and-renameat-function">rename and renameat function</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="sybolic-links"><a class="header" href="#sybolic-links">sybolic links</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="file-time"><a class="header" href="#file-time">file time</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="futimens-utimensat-and-utimes-function"><a class="header" href="#futimens-utimensat-and-utimes-function">futimens, utimensat, and utimes function</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="mkdir-mkdirat-and-rmdir-function"><a class="header" href="#mkdir-mkdirat-and-rmdir-function">mkdir, mkdirat, and rmdir function</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="reading-diectories"><a class="header" href="#reading-diectories">reading diectories</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="chdir-fchdir-and-getcwd-function"><a class="header" href="#chdir-fchdir-and-getcwd-function">chdir, fchdir, and getcwd function</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="de-morgans-laws"><a class="header" href="#de-morgans-laws">De Morgan’s Laws</a></h1>
+<p>\( \lnot ( p \land q) \equiv \lnot p \lor \lnot q \)</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+            </nav>
+
+        </div>
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        <script type="text/javascript">
+        window.addEventListener('load', function() {
+            MathJax.Hub.Register.StartupHook('End', function() {
+                window.setTimeout(window.print, 100);
+            });
+        });
+        </script>
+    </body>
+</html>
